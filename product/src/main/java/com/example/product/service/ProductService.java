@@ -25,6 +25,11 @@ public class ProductService {
         return modelMapper.map(productList, new TypeToken<List<ProductDTO>>(){}.getType());
     }
 
+    public ProductDTO getProductByProductId(Integer productId) {
+        Product product = productRepo.getProductsByProductId(productId);
+        return modelMapper.map(product, ProductDTO.class);
+    }
+
     public ProductDTO saveProduct(ProductDTO productDTO) {
         productRepo.save(modelMapper.map(productDTO, Product.class));
         return productDTO;

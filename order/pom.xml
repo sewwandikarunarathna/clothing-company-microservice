@@ -47,5 +47,17 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.clothingcompany</groupId>
+            <artifactId>inventory</artifactId>
+<!--            version gets dynamically, go to project parent and get the version-->
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.clothingcompany</groupId>
+            <artifactId>product</artifactId>
+            <!--            version gets dynamically, go to project parent and get the version-->
+            <version>${project.parent.version}</version>
+        </dependency>
     </dependencies>
 </project>

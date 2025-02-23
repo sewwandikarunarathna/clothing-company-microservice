@@ -19,6 +19,11 @@ public class InventoryController {
         return inventoryService.getAllInventories();
     }
 
+    @GetMapping("/item/{itemId}")
+    public InventoryDTO getItemByItemId(@PathVariable Integer itemId) {
+        return inventoryService.getInventoryByItemId(itemId);
+    }
+
     @PostMapping("/addinventory")
     public InventoryDTO saveInventory(@RequestBody InventoryDTO inventoryDTO) {
         return inventoryService.saveInventory(inventoryDTO);
